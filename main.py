@@ -4,6 +4,12 @@ from PIL import Image, ImageTk
 import tkinter as tk
 from tkinter import ttk
 from maydo import MayDoWindow
+from todo import ToDoWindow
+from done import DoneWindow
+# from project_structure_interpreter import ProjectInterpreter
+
+
+
 
 app = tk.Tk()
 app.title('May2Done')
@@ -19,37 +25,33 @@ def open_maydo():
 MayDo_button = tk.Button(app,
     text='MayDo',
     command = open_maydo)
-MayDo_button.pack()
+MayDo_button.grid(row = 0, column = 0)
 
 ###################################### TODO WINDOW
 
 def open_todo():
-    MayDo = MayDoWindow()
+    ToDo = ToDoWindow()
 
 ToDo_button = tk.Button(app,
     text='ToDo',
     command = open_todo)
-ToDo_button.pack()
+ToDo_button.grid(row = 0, column = 1)
 
 ###################################### DONE WINDOW
 
 def open_done():
-    MayDo = MayDoWindow()
+        Done = DoneWindow()
 
 Done_button = tk.Button(app,
     text='Done',
     command = open_done)
-Done_button.pack()
+Done_button.grid(row = 0, column = 2)
 
 
 # def open_may():
 #     maydo_window = tk.Toplevel()
 #     lvl = tk.Label(maydo_window,
 #         text="Hello World").pack()
-
-
-
-
 
 # maydo_frame = tk.Frame(maydo_window)
 
@@ -89,7 +91,8 @@ Done_button.pack()
 # print(comboExample.get())
 
 
-
+#remove these later
+open_maydo()
 
 
 
